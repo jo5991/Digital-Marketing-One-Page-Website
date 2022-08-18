@@ -1,0 +1,207 @@
+/* ||BLOCK */
+.header{
+
+    padding: 1rem 4%;
+    /* display: flex;
+    flex-direction: column; */
+  
+    background-color: var(--MAIN-BLUE);
+    /* background-color: red; */
+    color: var(--WHITE);    
+   
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    overflow-x: hidden;
+
+}
+
+/* ||ELEMENTS */
+.header__line{    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;     
+}
+
+/* ||MODIFIER */
+
+/* HAMBURGER MENU */
+.header__button{
+    background-color: transparent;
+    border: none;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+
+.header__hamburger,
+.header__hamburger::before,
+.header__hamburger::after {
+    background-color: var(--WHITE);
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    position: absolute;
+    transition: all 0.5s;
+}
+.header__hamburger::before,
+.header__hamburger::after{
+    content: "";
+}   
+.header__hamburger::before{    
+    transform: translate(-14px, -8px);
+}
+.header__hamburger::after{
+    transform: translate(-14px, 8px);
+}
+
+
+/* NAV MENU LIST ON THE RIGHT SIDE OF SCREEN*/
+.header__nav{
+    display: none;
+    transform-origin: right;
+    animation: showMenu 0.5s ease-in-out forwards;
+
+    background-color: var(--WHITE);
+    /* width: 40%; */
+    padding: 1rem 2rem 100vh 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+/* entrance animation for nav menu */
+@keyframes showMenu{
+    0% {
+        transform: scaleX(0);
+    }    
+    100%{
+        transform: scaleX(1);
+    }    
+}
+/* CHANGE HAMBURGER MENU TO X TO DISPLAY FULL NAV MENU*/
+
+/* middle line in hamburger icon */
+:is(header:hover, header:focus-within) .header__hamburger{
+    background-color: transparent;
+    
+}
+/* top line in hamburger icon */
+:is(header:hover, header:focus-within) .header__hamburger::before{
+    transform: translateX(-14px) rotate(45deg);
+}
+/* bottom line in hamburger icon */
+:is(header:hover, header:focus-within) .header__hamburger::after{
+    transform: translateX(-14px) rotate(-45deg);
+}
+/* for header nav menu to appear on the right side when you hover - for smaller screens */
+:is(header:hover, header:focus-within) .header__nav{
+    display: block;
+}
+
+/* company logo styling */
+.header__logo{
+    font-size: max(1.75rem, 3vh);
+    font-weight: 500;
+}
+.header__logo a{
+    text-decoration: none;
+}
+.header__logo a:any-link{
+    color: var(--WHITE);
+}
+
+/* navigation menu styling */
+.header__ulist{   
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;    
+}
+.header__a{
+    display: block; 
+    line-height: 2.4;    
+    padding: 0 1rem;
+}
+.header__a:any-link{
+    color: var(--BLACK);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.header__a:hover, .header__a:focus{
+    background-color: var(--GRAY-HIGHLIGHT);
+    width: 100%;    
+    border-radius: 1rem;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.button-contact{
+    background-color: var(--BUTTON-GREEN);
+    text-align: center;    
+    border-radius: 1rem;
+    white-space: nowrap;
+}
+
+
+/* RESPONSIVE DESIGN  */
+
+/* LARGE-SIZE SCREEN - TABLET / IPAD*/
+@media screen and (min-width:992px){
+    /* to display logo and nav menu on one line */
+    .header{       
+        display: flex;        
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+  
+    .header__hamburger{
+        display: none;
+    }
+    .header__nav{   
+          
+        background-color: transparent;          
+        display: block;        
+       
+        transform-origin: none;
+        animation: none;           
+        
+        padding: 0;
+        position: static;
+        top: 0;
+        right: 0;
+    }
+    .header__ulist{
+        
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header__a:any-link{
+        color: var(--WHITE);
+    }
+
+    .header__a:hover, .header__a:focus{
+        background-color: #130bed;
+        
+       
+    }
+}
+
+/* XL-SIZE SCREEN */
+@media screen and (min-width:1200px){
+    .header{
+        padding: 1rem 8%;
+    }
+}
+@media screen and (min-width:1400px){
+    .header{
+        padding: 1rem 16%;
+    }
+}
+/* LANDSCAPE MOBILE SCREEN */
+@media screen and (max-height:425px) and (min-aspect-ration:7/4){} 

@@ -1,0 +1,130 @@
+/* ||BLOCKS */
+footer{
+    color: white;
+}
+/* ||ELEMENTS */
+.footer-main{
+    background-color: var(--FOOTER-BLUE);    
+    padding: 4rem 4%;  
+    display: flex;
+    flex-direction: column;     
+}
+.footer-copyright{   
+    background-color: var(--FOOTER-COPYRIGHT);
+    padding: 2rem 4%;   
+}
+/* ||MODIFIERS */
+.footer-copyright p{
+    font-size: 1rem;
+}
+footer li{
+    list-style: none;      
+}
+footer a{
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;    
+}
+
+footer h6{
+    font-size: 1rem;
+}
+.address p{
+    width: 70%;
+    margin-bottom: 1rem;
+}
+.address .number{
+    padding: 0.2rem 0.6rem 0.2rem 0;
+}
+.address a{
+    padding: 0.5rem 0;
+}
+.address div{
+    display: flex;
+  
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.address a{
+    font-size: 1rem;
+}
+.social-icon div{
+    display: flex;
+    margin-bottom: 1rem;    
+}
+.social-icon h6{
+    margin-bottom: 1rem;
+}
+.social-icon img{
+    width: 1.4rem;
+    margin-right: 1.4rem;
+}
+.product, .social-share, .company{
+    margin-bottom: 1rem;
+}
+.product li, .social-share li, .company li{
+    padding: 0.4rem 0;
+}
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2.4rem;
+}
+footer a:hover, footer a:focus{
+    text-decoration: underline;
+}
+/* ||RESPONSIVE */
+/* SMALL-SIZE SCREEN - MOBILE*/
+@media screen and (min-width:576px){}
+
+/* MEDIUM-SIZE SCREEN - TABLET*/
+@media screen and (min-width:768px){
+    .footer-main{
+        flex-flow: row wrap;
+        row-gap: 2.4rem;
+        justify-content: space-between; 
+    }  
+    
+    .social-share, .company{
+        width: min(calc(40% - 1rem), 400px);     
+       
+    }
+    .product{
+        width: min(calc(60% - 1rem), 400px);       
+       
+    }
+    /* .address{
+        width: min(calc(60% - 1rem), 400px);
+        border: 1px solid red;
+    } */
+}
+
+/* LARGE-SIZE SCREEN - TABLET / IPAD*/
+@media screen and (min-width:992px){
+    .address .div{
+        width: min(calc(60% - 1rem), 1400px);
+    }
+    .social-share, .product, .company{
+        width: min(calc(20% -1rem), 400px);
+    }
+}
+
+/* XL-SIZE SCREEN */
+@media screen and (min-width:1200px){
+    .footer-main{
+        padding: 4rem 8% ;
+    }
+    .footer-copyright{
+        padding: 2rem 8%;
+    }
+}
+@media screen and (min-width:1400px){
+    .footer-main{
+        padding: 4rem 16% ;
+    }
+    .footer-copyright{
+        padding: 2rem 16%;
+    }
+}
+/* LANDSCAPE MOBILE SCREEN */
+@media screen and (max-height:425px) and (min-aspect-ration:7/4){} 

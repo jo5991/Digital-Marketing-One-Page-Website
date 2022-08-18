@@ -1,0 +1,97 @@
+/* ||BLOCKS */
+#testimonial{
+    padding: 2rem 4%;
+    background-color: var(--TESTIMONIAL-PURPLE) ;
+}
+/* ||ELEMENTS */
+.testimonial-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.testimonial-single{
+    background-color: var(--TESTIMONIAL-BG);
+    padding: 2rem;
+    border-radius: 1rem;   
+    display: flex;          
+}
+.testimonial-company{
+    padding: 4rem 4%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+    row-gap: 2rem;  
+}
+/* ||MODIFIERS */
+#testimonial h3{
+    margin-bottom: 2rem;
+}
+.testimonial-title{
+    color: var(--WHITE);    
+}
+.testimonial-image img{
+    width: 100px;
+    border-radius: 50%;    
+}
+.testimonial-text{
+    padding-left: 1.2rem;
+}
+.testimonial-text h6{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0.8rem;
+}
+.testimonial-text .position{
+    color:var(--MAIN-BLUE);
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+}
+.testimonial-company div{
+    width: min(calc(50% - 2rem), 300px);
+}
+.testimonial-company img{
+    width: 100%
+}
+/* ||RESPONSIVE */
+/* SMALL-SIZE SCREEN - MOBILE*/
+@media screen and (min-width:576px){
+    .testimonial-container{
+        flex-flow: row wrap;
+        justify-content: space-between;
+        row-gap: 2rem;
+    }
+    .testimonial-single{
+        width: min(calc(50% - 1rem), 400px);
+    }
+}
+/* MEDIUM-SIZE SCREEN - TABLET*/
+@media screen and (min-width:768px){
+    .testimonial-single{
+        width: min(calc(50% - 1rem), 500px);
+    }
+    .testimonial-company div{
+        width: min(calc(33% - 2rem), 300px);
+    }
+}
+/* LARGE-SIZE SCREEN - TABLET / IPAD*/
+@media screen and (min-width:992px){
+    .testimonial-company div{
+        width: min(calc(20% - 2rem), 300px);
+    }
+}
+/* XL-SIZE SCREEN */
+@media screen and (min-width:1200px){
+    .testimonial-single{
+        width: min(calc(25% - 1rem), 500px);
+    }
+    #testimonial, .testimonial-company{
+        padding: 4rem 8%;
+    }    
+}
+@media screen and (min-width:1400px){
+    #testimonial, .testimonial-company{
+        padding: 4rem 16%;
+    }
+}
+/* LANDSCAPE MOBILE SCREEN */
+@media screen and (max-height:425px) and (min-aspect-ration:7/4){} 

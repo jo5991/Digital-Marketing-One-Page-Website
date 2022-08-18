@@ -1,0 +1,192 @@
+/* ||BLOCKS */
+#plans{
+    padding: 2rem 4%;
+}
+
+/* ||ELEMENTS */
+.plans-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+}
+.plans-price{
+    display: flex;
+    flex-direction: column;
+}
+.price-plan{
+    border: 1px solid #CCCCCC;
+    padding: 2rem;
+    border-radius: .2rem;
+    background-color: white;
+    transition: all 0.5s;
+    margin-top: 2.4rem;
+}
+/* ||MODIFIERS */
+.plans-title h5{
+    line-height: 1.2;
+}
+.checkbox-container label{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.price-plan * {
+    /* CENTER IMAGE AND TEXT */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;   
+}
+.price-plan ul{
+    margin-top: 1.2rem;
+    margin-bottom: 2.4rem;
+    list-style: none;
+    color: gray;    
+}
+.price-plan li{
+    margin-bottom: 1rem;
+}
+
+.price-plan h5{
+    color: #3C37F1 ;
+    font-size: 2.4rem;
+}
+
+.price-plan h4{
+    margin-top: 2.4rem;
+}
+
+.price-plan button{
+    display: block;
+    border: 1px solid #3C37F1;
+    background-color: rgba(255, 255, 255, 0);
+    color: #3C37F1;   
+    transition: all 0.5s;
+}
+.price-plan button:hover{
+    background-color: #3C37F1;
+    color: white;
+}
+.professional button{
+    background-color: #3C37F1;
+    color: white;
+    border: none;
+}
+.professional button:hover{
+    background-color: #130bed;
+    color: white;
+}
+.professional{
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.205);
+    border: none;
+}
+.price-plan:hover{
+    
+    background-color: #1998FF ;
+}
+.price-plan:hover h4, .price-plan:hover h5, .price-plan:hover li, .price-plan:hover button {
+    color: white;    
+}
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+/* ||RESPONSIVE */
+/* SMALL-SIZE SCREEN - MOBILE*/
+@media screen and (min-width:576px){
+    .plans-text{        
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;        
+    }   
+    .plans-title{              
+        padding-right: 4%;
+    }
+}
+
+/* MEDIUM-SIZE SCREEN - TABLET*/
+@media screen and (min-width:768px){
+    .plans-price{
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .price-plan{
+        width: min(calc(33% - 1rem), 800px);
+    }
+}
+/* LARGE-SIZE SCREEN - TABLET / IPAD*/
+@media screen and (min-width:992px){}
+
+/* XL-SIZE SCREEN */
+@media screen and (min-width:1200px){
+    #plans{
+        padding: 2rem 8%;
+    }
+}
+@media screen and (min-width:1400px){
+    #plans{
+        padding: 4rem 16%;
+    }
+}
+/* LANDSCAPE MOBILE SCREEN */
+@media screen and (max-height:425px) and (min-aspect-ration:7/4){} 
+
+
+/* The switch - the box around the slider */
+.check-label {
+    position: relative;
+    display: inline-block;
+    width: 3.5rem;
+    height: 1.5rem;
+  }
+  
+  /* Hide default HTML checkbox */
+  .check-label input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2rem;
+    width: 1.2rem;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    transform: translateX(2rem);
+  }  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 2.5rem;
+  }  
+  .slider.round:before {
+    border-radius: 50%;
+  }

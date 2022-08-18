@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/* font-family: 'Rubik', sans-serif; */
+/* #3C37F1 - main blue
+#1998FF - button blue
+#A52EFA - testimonial purple
+#3F3ADF - footer blue
+#4D48E1 - copyright footer */
+
+/* ||GLOBAL COLORS */
+:root{
+    /* FONT */
+    --FF: 'Rubik', sans-serif;
+    /* --FS:
+    --FS-XL: */
+
+    /* COLOR */
+    --MAIN-BLUE:rgb(60,55,241); 
+    --BUTTON-BLUE:#1998FF;
+    --BUTTON-HOVER: hsla(207, 100%, 55%, 0.854); 
+    --TESTIMONIAL-PURPLE:#A52EFA ;
+    --FOOTER-BLUE:#3F3ADF;
+    --FOOTER-COPYRIGHT:#4D48E1;
+    --SUBTEXT:gray;
+    --GRAY-HIGHLIGHT:rgb(204,204,204);
+    --BORDER-LIGHT:#CCCCCC;
+    --WHITE: white;
+    --TESTIMONIAL-BG: rgba(255, 255, 255, 0.807);
+    --BUTTON-GREEN:rgb(0,214,99);
+    --BLACK: rgb(0, 0, 0);
+    /* GENERAL */
+    /* --PADDING */
+    /* --SHADOW: */
+
+    
+}
+   
+/* ||RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* ||GENERAL STYLES */
+h1{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+h3{
+ font-size: 1.4rem;
+ font-weight: 500;
+}
+h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+h5{
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.8;
+}
+p, li{
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+button{
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 1em 2em;
+    border-radius: 1.5em;
+    cursor: pointer;
+}
+
+/* SMALL-SIZE SCREEN - MOBILE*/
+@media screen and (min-width:576px){}
+
+/* MEDIUM-SIZE SCREEN - TABLET*/
+@media screen and (min-width:768px){}
+
+/* LARGE-SIZE SCREEN - TABLET / IPAD*/
+@media screen and (min-width:992px){}
+
+/* XL-SIZE SCREEN */
+@media screen and (min-width:1200px){}
+@media screen and (min-width:1400px){}
+/* LANDSCAPE MOBILE SCREEN */
+@media screen and (max-height:425px) and (min-aspect-ration:7/4){} 

@@ -1,0 +1,64 @@
+/* ||BLOCKS */
+#about{
+    padding: 2rem 4%;
+    display: flex;
+    flex-direction: column;
+}
+/* ||ELEMENTS */
+
+/* ||MODIFIERS */
+.about-text p{
+    color: var(--SUBTEXT);
+    padding-top: 1.2rem;
+    font-weight: 500;
+}
+.about-text ul{
+    padding-top: 1.2rem;
+}
+.about-text li{
+    list-style: none;
+    background-image: url(../icon/check-circle.svg);
+    background-repeat: no-repeat;
+    padding-left: 2.4rem;
+    color: var(--SUBTEXT);
+    margin-bottom: 1.2rem;
+}
+.about-image img{
+    width: 100%;
+}
+/* ||RESPONSIVE */
+/* SMALL-SIZE SCREEN - MOBILE*/
+@media screen and (min-width:576px){
+
+}
+/* MEDIUM-SIZE SCREEN - TABLET*/
+@media screen and (min-width:768px){
+    #about{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .about-text{
+        width: 70%;
+        padding-right: 4%;
+    }
+}
+
+/* LARGE-SIZE SCREEN - TABLET / IPAD*/
+@media screen and (min-width:992px){}
+
+/* XL-SIZE SCREEN */
+@media screen and (min-width:1200px){
+    #about{
+        padding: 2rem 8%;
+    }
+}
+@media screen and (min-width:1400px){
+    #about{
+        padding: 4rem 16%;
+    }
+}
+/* LANDSCAPE MOBILE SCREEN */
+@media screen and (max-height:425px) and (min-aspect-ration:7/4){
+   
+} 

@@ -1,0 +1,110 @@
+/* ||BLOCKS */
+#projects{
+    padding: 2rem 4%;
+}
+/* ||ELEMENTS */
+.projects-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 1rem;    
+}
+.projects-image{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    row-gap: 2rem;
+    padding: 2rem;
+}
+.projects-stat{
+    display: flex;
+    flex-direction: column;
+}
+/* ||MODIFIERS */
+.projects-text button{
+    border: 1px solid var(--MAIN-BLUE);
+    background-color: var(--WHITE);
+    color: var(--MAIN-BLUE) ;    
+    transition: all 0.5s;    
+}
+.projects-text button:hover{
+    color: var(--WHITE);
+    background-color: var(--MAIN-BLUE);
+}
+.projects-image img{    
+    border-radius: 1rem;   
+    transition: all 0.5s;    
+}
+.projects-image img:hover{
+    transform: scale(1.1);
+}
+.stat{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 2.4rem;
+}
+.stat h6{
+    font-size: 1.6rem;
+}
+.stat div{
+    padding-left: 1rem;
+    
+}
+/* ||RESPONSIVE */
+/* SMALL-SIZE SCREEN - MOBILE*/
+@media screen and (min-width:576px){
+    .projects-text{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .projects-image{        
+        flex-flow: row wrap;
+        justify-content: space-between;              
+    }
+    .projects-image div{
+        width: min(calc(50% - 1rem), 300px);   
+       
+    }
+    .projects-stat{
+        flex-flow: row wrap;
+        justify-content: space-between;        
+    }
+    .stat{
+        width: min(calc(50%-2rem), 400px);
+    }
+}
+
+/* MEDIUM-SIZE SCREEN - TABLET*/
+@media screen and (min-width:768px){
+    .projects-image div{
+        width: min(calc(33% - 1rem), 300px);        
+    }
+}
+
+/* LARGE-SIZE SCREEN - TABLET / IPAD*/
+@media screen and (min-width:992px){
+    .stat{
+        width: min(calc(25%-2rem), 400px);
+    }
+}
+
+/* XL-SIZE SCREEN */
+@media screen and (min-width:1200px){
+    #projects{
+        padding: 2rem 8%;
+    }
+    .projects-image div{
+        width: min(calc(20% - 1rem), 240px);        
+    }
+}
+@media screen and (min-width:1400px){
+    #projects{
+        padding: 4rem 16%;
+    }
+}
+
+/* LANDSCAPE MOBILE SCREEN */
+@media screen and (max-height:425px) and (min-aspect-ration:7/4){} 

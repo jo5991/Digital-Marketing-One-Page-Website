@@ -1,0 +1,70 @@
+/* MOBILE FIRST */
+/* ||BLOCKS */
+#home{
+    background-color: var(--MAIN-BLUE);
+    padding: 4rem 4%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ||ELEMENTS */
+
+/* ||MODIFIERS */
+
+h1, #home p{
+    color: white;
+}
+#home p, #home button{
+    margin-top: 1.2rem;
+}
+#home button{        
+    border: none;
+    background-color: var(--BUTTON-BLUE);  
+    color: white;
+    transition: all 0.5s;
+}
+#home button:hover, #home button:focus{
+    background-color: var(--BUTTON-HOVER);
+}
+#home img{
+    margin-top: 2.4rem;
+    width: 100%;
+}
+
+/* ||RESPONSIVE */
+/* SMALL-SIZE SCREEN - MOBILE */
+@media screen and (min-width:576px){
+    #home{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }   
+    .home-image{
+        padding-left: 2rem;       
+    }
+}
+/* MEDIUM-SIZE SCREEN - TABLET*/
+@media screen and (min-width:768px){}
+
+/* LARGE-SIZE SCREEN - TABLET / IPAD*/
+@media screen and (min-width:992px){
+    .home-text{    
+        padding-right: 8%;
+    }
+}
+/* XL-SIZE SCREEN */
+@media screen and (min-width:1200px){
+    #home{
+        padding:4rem 8%;
+    }   
+}
+@media screen and (min-width:1400px){
+    #home{
+        padding: 4rem 16%;
+    }
+}
+
+/* LANDSCAPE MOBILE SCREEN */
+@media screen and (max-height:425px) and (min-aspect-ration:7/4){}
+
+

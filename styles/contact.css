@@ -1,0 +1,87 @@
+/* ||BLOCKS */
+#contact{
+    padding: 4rem 4%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;    
+}
+/* ||ELEMENTS */
+.contact-form h5{
+    line-height: 1.2;
+    margin-bottom: 2.4rem;
+}
+/* ||MODIFIERS */
+.name-email{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.2rem;
+}
+ 
+.contact-form .name, .contact-form .email{  
+    padding: 1rem;
+    border: 1px solid var(--BORDER-LIGHT);
+    margin-bottom: 1.2rem;
+    border-radius: 0.2rem;
+    width: min(calc(50% -2.4rem), 600px);
+   
+}
+.contact-form .message{
+    width: 100%;
+    min-height: 8rem;
+    padding:1rem;
+    border: 1px solid var(--BORDER-LIGHT);
+}
+.contact-form button{
+    margin-top: 1.2rem;
+    border: none;
+    background-color: var(--BUTTON-BLUE);
+    color: white;
+    transition: all 0.5s;
+}
+.contact-form button:hover{
+    background-color: var(--BUTTON-HOVER);
+}
+/* SMALL-SIZE SCREEN - MOBILE*/
+@media screen and (min-width:576px){
+    #contact{
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1rem;
+    }
+    .name-email{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 1.2rem;
+    }
+    .name, .email{
+        width: min(calc(50% -2.4rem), 600px);
+    } 
+}
+
+/* MEDIUM-SIZE SCREEN - TABLET*/
+@media screen and (min-width:768px){
+    .contact-form{
+    width: min(calc(70% - 1rem), 1240px);
+}
+       
+}
+
+/* LARGE-SIZE SCREEN - TABLET / IPAD*/
+@media screen and (min-width:992px){   
+    
+}
+/* XL-SIZE SCREEN */
+@media screen and (min-width:1200px){
+    #contact{
+        padding: 4rem 8%;
+    }
+}
+@media screen and (min-width:1400px){
+    #contact{
+        padding: 4rem 16%;
+    }
+}
+
+/* LANDSCAPE MOBILE SCREEN */
+@media screen and (max-height:425px) and (min-aspect-ration:7/4){} 

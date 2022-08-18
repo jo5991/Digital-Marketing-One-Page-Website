@@ -1,0 +1,68 @@
+
+/* ||BLOCKS */
+#services{
+    padding: 4rem 4%;    
+}
+/* ||ELEMENTS */
+.services-list{
+    display: flex;
+    flex-direction: column;
+}
+.services-text{
+    margin-top: 2.4rem;
+}
+/* ||MODIFIERS */
+.services-text h4, .services-text p{
+    margin-top: 1.2rem;    
+    text-align: center;
+}
+.services-text p{
+    color: var(--SUBTEXT);
+}
+.services-text img{    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ||RESPONSIVE */
+/* SMALL-SIZE SCREEN - MOBILE*/
+@media screen and (min-width:576px){
+    .services-list{
+        flex-flow: row wrap;
+        justify-content: space-between;        
+    }
+    .services-text{
+        width: min(calc(33%), 450px);        
+    }        
+}
+
+/* MEDIUM-SIZE SCREEN - TABLET*/
+@media screen and (min-width:768px){
+  
+}
+/* LARGE-SIZE SCREEN - TABLET / IPAD*/
+@media screen and (min-width:992px){
+    .services-text h4, .services-text p{
+        margin-top: 1.2rem;    
+        text-align: left;
+    }
+    .services-text img{    
+        margin-left: 0;        
+    }
+    .services-text{
+        width: min(calc(33% - 2rem), 450px);                
+    }
+}
+/* XL-SIZE SCREEN */
+@media screen and (min-width:1200px){
+    #services{
+        padding: 8%;
+    }
+}
+@media screen and (min-width:1400px){
+    #services{
+        padding: 4rem 16%;
+    }
+}
+/* LANDSCAPE MOBILE SCREEN */
+@media screen and (max-height:425px) and (min-aspect-ration:7/4){} 
